@@ -1,0 +1,24 @@
+<head>
+<title>castle</title>
+</head>
+
+<body>
+<h1>Welcome to Meteor!</h1>
+
+{{>heart}}
+
+<ul>
+  {{#each thermostates}}
+  {{> thermos }}
+  {{/each}}
+</ul>
+
+</body>
+
+<template name="thermos">
+  <li>{{name}} {{valve}} {{measured}} {{desired}}</li>
+</template>
+
+<template name="heart">
+  <img data-content="This heart beats in time with service checks" id="heart" src="images/pixel-heart.svg" alt="">
+</template>
